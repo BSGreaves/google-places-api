@@ -1,0 +1,11 @@
+#placesOutput {
+  background-color: #85144b; }
+  #placesOutput a {
+    color: #FFDC00; }
+  #placesOutput h4 {
+    padding: 5px; }
+
+#detailsOutput {
+  background-color: #39CCCC; }
+  #detailsOutput h3, #detailsOutput h5 {
+    font-family: "Luckiest Guy", cursive; }

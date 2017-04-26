@@ -1,0 +1,11 @@
+@import "color";
+@import "fonts";
+
+
+#detailsOutput {
+	background-color: $teal;
+
+	h3, h5 {
+		font-family: $heading;
+	}
+}

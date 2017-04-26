@@ -1,13 +1,13 @@
 $(document).ready(function(){
 
-const apiKey = "AIzaSyC33AYoOXYdy4KEM7P02-aXqqsOfxM7jLQ";
+const apiKey = "";
 
 	$("body").on("click", "li", (e) => {
 		loadPlaces(e.target.innerHTML).then(data => {
 			printResults(data.results);
 		}).catch((error) => {
 			console.log(error);
-		})
+		});
 	});
 
 	$("body").on("click", ".place", (e) => {
@@ -15,7 +15,7 @@ const apiKey = "AIzaSyC33AYoOXYdy4KEM7P02-aXqqsOfxM7jLQ";
 			printDetails(data.result);
 		}).catch((error) => {
 			console.log(error);
-		})
+		});
 	});
 
 	const loadDetails = (placeID) => {
@@ -24,7 +24,7 @@ const apiKey = "AIzaSyC33AYoOXYdy4KEM7P02-aXqqsOfxM7jLQ";
 				.done((data) => resolve(data))
 				.fail((error) => reject(error));
 		});
-	}
+	};
 
 	const loadPlaces = (dropdownType) => {
 		return new Promise ((resolve, reject) => {
@@ -39,13 +39,13 @@ const apiKey = "AIzaSyC33AYoOXYdy4KEM7P02-aXqqsOfxM7jLQ";
 		$("#placesOutput").html(results.map(result => {
 			return (`<a href="#"><h4 class="place" id="${result.place_id}">${result.name}</h4></a>`);
 		}));
-	}
+	};
 
 	const printDetails = (result) => {
 		console.log(result);
 		let ops = ""; //outputstring
-		ops += `<h3>${result.name}</h3>`
-		ops += `<h5>${result.adr_address}</h5>`
+		ops += `<h3>${result.name}</h3>`;
+		ops += `<h5>${result.adr_address}</h5>`;
 		$("#detailsOutput").html(ops);
-	}
+	};
 });

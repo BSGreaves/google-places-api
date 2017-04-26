@@ -1,0 +1,13 @@
+@import "color";
+
+#placesOutput {
+	background-color: $maroon;
+
+	a {
+		color: $yellow;
+	}
+
+	h4 {
+		padding: 5px;
+	}
+}
